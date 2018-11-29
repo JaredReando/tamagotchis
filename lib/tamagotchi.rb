@@ -2,8 +2,14 @@ require('pry')
 
 class Tamagotchi
 
+    @@tamagotchi_db = []
+
+    def self.show_gotchi(id)
+      @@tamagotchi_db
+    end
+
  attr_reader :name, :sleep_level, :happy_level
- attr_accessor :food_level
+ attr_accessor :food_level, :poop_level
 
 
   def initialize (name)
@@ -18,6 +24,9 @@ class Tamagotchi
       happy: @birth_time
     }
     @deceased = false
+
+    @id = @@tamagotchi_db.length
+    @@tamagotchi_db.push(self)
   end
 
   def status (check_attr)

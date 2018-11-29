@@ -1,5 +1,11 @@
 
 <h2> <%= @message %> </h2>
- <form action="/list" method="post">
-   <button name="submit" type="submit" class="btn-alert">Add</button>
+<h2>Food Level: <%= @food_level %> </h2>
+<h2>Happy Level: <%= @happy_level %> </h2>
+<h2>Poop Level: <%= @poop_level.to_i %> </h2>
+
+
+ <form action="/<" method="get">
+   <input type="hidden" name="feed" value="feed">
+   <button name="submit" type="submit" class="btn-primary">Add</button>
  </form>

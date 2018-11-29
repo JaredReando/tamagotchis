@@ -5,7 +5,11 @@ require('./lib/tamagotchi')
 require('pry')
 
 get ('/') do
-  # @message = Favorite.list_all_names
+  
+  tommy = Tamagotchi.new('tommy')
+  @poop_level = tommy.poop_level
+  @happy_level = tommy.happy_level
+  @food_level = tommy.food_level
   (erb :input)
 end
 
